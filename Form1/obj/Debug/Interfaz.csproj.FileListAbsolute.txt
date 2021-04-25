@@ -1,0 +1,15 @@
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\bin\Debug\Form1.exe.config
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\bin\Debug\Form1.exe
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\bin\Debug\Form1.pdb
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Form1.Form1.resources
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Form1.Properties.Resources.resources
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Interfaz.csproj.GenerateResource.cache
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Interfaz.csproj.CoreCompileInputs.cache
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Form1.exe
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Form1.pdb
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Interfaz.csprojAssemblyReference.cache
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\bin\Debug\Dominio.dll
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\bin\Debug\Negocio.dll
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\bin\Debug\Dominio.pdb
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\bin\Debug\Negocio.pdb
+C:\Users\Manu\source\repos\WIN FORM\WinForm\Form1\obj\Debug\Interfaz.csproj.CopyComplete
