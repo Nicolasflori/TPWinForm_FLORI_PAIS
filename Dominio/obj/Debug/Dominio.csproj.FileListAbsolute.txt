@@ -4,3 +4,9 @@ C:\Users\Manu\source\repos\WIN FORM\WinForm\Dominio\obj\Debug\Dominio.csprojAsse
 C:\Users\Manu\source\repos\WIN FORM\WinForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Manu\source\repos\WIN FORM\WinForm\Dominio\obj\Debug\Dominio.dll
 C:\Users\Manu\source\repos\WIN FORM\WinForm\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Nico\Desktop\winform-main\Dominio\bin\Debug\Dominio.dll
+C:\Users\Nico\Desktop\winform-main\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Nico\Desktop\winform-main\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Nico\Desktop\winform-main\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Nico\Desktop\winform-main\Dominio\obj\Debug\Dominio.dll
+C:\Users\Nico\Desktop\winform-main\Dominio\obj\Debug\Dominio.pdb

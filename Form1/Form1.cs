@@ -1,19 +1,16 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Dominio;
 using Negocio;
-using System.Data.SqlClient;
+
 namespace Form1
 {
     public partial class Form1 : Form
     {
+        private List<Articulos> listaArticulos;
         public Form1()
         {
             InitializeComponent();
@@ -27,11 +24,15 @@ namespace Form1
         private void cargarGrilla()
         {
             NegocioArticulos negocio = new NegocioArticulos();
-            
+
             try
             {
-                dataGridViewPrincipal.DataSource = negocio.listar();
+
+                listaArticulos = negocio.listar();
+                dataGridViewPrincipal.DataSource = listaArticulos;
                 dataGridViewPrincipal.Columns["ImagenUrl"].Visible = false;
+
+                cargarImagen(listaArticulos[0].ImagenURl);
 
             }
             catch (Exception ex)
@@ -39,6 +40,25 @@ namespace Form1
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void image_click(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Articulos seleccionado = (Articulos)dataGridViewPrincipal.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.ImagenURl);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se pudo encontrar la imagen");
+            }
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            pictureBox1.Load(imagen);
         }
     }
 }

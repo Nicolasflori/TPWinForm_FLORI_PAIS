@@ -35,23 +35,25 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.dataGridViewPrincipal = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitulo
             // 
             this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(245, 9);
+            this.labelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Location = new System.Drawing.Point(245, 19);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(275, 65);
+            this.labelTitulo.Size = new System.Drawing.Size(287, 73);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Articulos";
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.Location = new System.Drawing.Point(12, 396);
+            this.buttonBuscar.Location = new System.Drawing.Point(22, 454);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(144, 38);
             this.buttonBuscar.TabIndex = 2;
@@ -61,7 +63,7 @@
             // buttonAgregar
             // 
             this.buttonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregar.Location = new System.Drawing.Point(162, 396);
+            this.buttonAgregar.Location = new System.Drawing.Point(172, 454);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(144, 38);
             this.buttonAgregar.TabIndex = 3;
@@ -70,7 +72,7 @@
             // 
             // buttonDetalle
             // 
-            this.buttonDetalle.Location = new System.Drawing.Point(612, 397);
+            this.buttonDetalle.Location = new System.Drawing.Point(622, 455);
             this.buttonDetalle.Name = "buttonDetalle";
             this.buttonDetalle.Size = new System.Drawing.Size(144, 38);
             this.buttonDetalle.TabIndex = 6;
@@ -80,7 +82,7 @@
             // buttonEliminar
             // 
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.Location = new System.Drawing.Point(462, 396);
+            this.buttonEliminar.Location = new System.Drawing.Point(472, 454);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(144, 38);
             this.buttonEliminar.TabIndex = 5;
@@ -90,7 +92,7 @@
             // buttonModificar
             // 
             this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.Location = new System.Drawing.Point(312, 396);
+            this.buttonModificar.Location = new System.Drawing.Point(322, 454);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(144, 38);
             this.buttonModificar.TabIndex = 4;
@@ -100,16 +102,27 @@
             // dataGridViewPrincipal
             // 
             this.dataGridViewPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPrincipal.Location = new System.Drawing.Point(12, 68);
+            this.dataGridViewPrincipal.Location = new System.Drawing.Point(22, 104);
             this.dataGridViewPrincipal.Name = "dataGridViewPrincipal";
-            this.dataGridViewPrincipal.Size = new System.Drawing.Size(744, 305);
+            this.dataGridViewPrincipal.Size = new System.Drawing.Size(744, 324);
             this.dataGridViewPrincipal.TabIndex = 7;
+            this.dataGridViewPrincipal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.image_click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(780, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(295, 264);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1087, 511);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewPrincipal);
             this.Controls.Add(this.buttonDetalle);
             this.Controls.Add(this.buttonEliminar);
@@ -121,6 +134,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +149,7 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.DataGridView dataGridViewPrincipal;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -15,8 +15,7 @@ namespace Dominio
         public string Marca { get; set; }
         public string Categoria { get; set; }
         public string ImagenURl { get; set; }
-        public decimal Money { get; set; }
-
+        public decimal Precio { get; set; }
 
     }
 }
