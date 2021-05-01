@@ -54,7 +54,6 @@
             this.labelTitulo.Size = new System.Drawing.Size(287, 73);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Artículos";
-            this.labelTitulo.Click += new System.EventHandler(this.labelTitulo_Click);
             // 
             // buttonBuscar
             // 
