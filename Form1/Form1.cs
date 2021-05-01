@@ -27,17 +27,13 @@ namespace Form1
 
             try
             {
-
                 listaArticulos = negocio.listar();
                 dataGridViewPrincipal.DataSource = listaArticulos;
                 dataGridViewPrincipal.Columns["ImagenUrl"].Visible = false;
-
                 cargarImagen(listaArticulos[0].ImagenURl);
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -65,11 +61,6 @@ namespace Form1
         {
             FormAgregarArt agregar = new FormAgregarArt();
             agregar.ShowDialog();
-        }
-
-        private void labelTitulo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

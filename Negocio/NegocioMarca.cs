@@ -20,12 +20,7 @@ namespace Negocio
 
                 while (datos.Lector.Read())
                 {
-                    //lista.Add(new Marca((int)datos.Lector["Id"], (string)datos.Lector["Descripcion"]));
-                    Marca aux = new Marca();
-                    aux.ID = (int)datos.Lector["ID"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
-
-                    lista.Add(aux);
+                    lista.Add(new Marca((int)datos.Lector["Id"], (string)datos.Lector["Descripcion"]));
                 }               
                 return lista;
             }
@@ -38,7 +33,6 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
-
             }
         }     
     }
