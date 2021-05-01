@@ -60,5 +60,11 @@ namespace Form1
         {
             pictureBox1.Load(imagen);
         }
+
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            FormAgregarArt agregar = new FormAgregarArt();
+            agregar.ShowDialog();
+        }
     }
 }

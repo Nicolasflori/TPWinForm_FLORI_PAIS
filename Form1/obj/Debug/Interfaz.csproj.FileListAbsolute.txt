@@ -43,3 +43,4 @@ C:\Users\Manu\Source\Repos\Nicolasflori\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Int
 C:\Users\Manu\Source\Repos\Nicolasflori\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Interfaz.csproj.CopyComplete
 C:\Users\Manu\Source\Repos\Nicolasflori\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Form1.exe
 C:\Users\Manu\Source\Repos\Nicolasflori\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Form1.pdb
+C:\Users\Manu\Source\Repos\Nicolasflori\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Form1.FormAgregarArt.resources
