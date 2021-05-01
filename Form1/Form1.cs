@@ -66,5 +66,10 @@ namespace Form1
             FormAgregarArt agregar = new FormAgregarArt();
             agregar.ShowDialog();
         }
+
+        private void labelTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

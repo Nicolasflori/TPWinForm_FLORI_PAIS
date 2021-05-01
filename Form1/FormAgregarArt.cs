@@ -23,14 +23,20 @@ namespace Form1
         {
             if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
                 e.Handled = true;
-
         }
 
         private void FormAgregarArt_Load(object sender, EventArgs e)
         {
             NegocioMarca negocioMarca = new NegocioMarca();
+            try
+            {
+                comboBoxMarca.DataSource = negocioMarca.listar();
+            }
+            catch (Exception ex)
+            {
 
-            comboBoxMarca.DataSource = negocioMarca.listar();
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
