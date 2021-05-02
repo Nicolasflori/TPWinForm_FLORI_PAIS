@@ -60,3 +60,4 @@ C:\Users\Nico\Desktop\New folder\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Interfaz.c
 C:\Users\Nico\Desktop\New folder\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Interfaz.csproj.CopyComplete
 C:\Users\Nico\Desktop\New folder\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Form1.exe
 C:\Users\Nico\Desktop\New folder\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Form1.pdb
+C:\Users\Nico\Desktop\New folder\TPWinForm_FLORI_PAIS\Form1\obj\Debug\Form1.FormVerDetalles.resources

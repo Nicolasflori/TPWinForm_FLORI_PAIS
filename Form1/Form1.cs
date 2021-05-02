@@ -62,5 +62,11 @@ namespace Form1
             FormAgregarArt agregar = new FormAgregarArt();
             agregar.ShowDialog();
         }
+
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+            FormVerDetalles detalle = new FormVerDetalles();
+            detalle.ShowDialog();
+        }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="FormAgregarArt.Designer.cs">
       <DependentUpon>FormAgregarArt.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerDetalles.Designer.cs">
+      <DependentUpon>FormVerDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarArt.resx">
       <DependentUpon>FormAgregarArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerDetalles.resx">
+      <DependentUpon>FormVerDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,4 +1,6 @@
-﻿namespace Form1
+﻿using System;
+
+namespace Form1
 {
     partial class Form1
     {
@@ -86,11 +88,12 @@
             this.buttonDetalle.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonDetalle.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.buttonDetalle.Location = new System.Drawing.Point(622, 454);
-            this.buttonDetalle.Name = "buttonDetalle";
+            this.buttonDetalle.Name = "buttonDetalles";
             this.buttonDetalle.Size = new System.Drawing.Size(144, 55);
             this.buttonDetalle.TabIndex = 6;
             this.buttonDetalle.Text = "Ver Detalles";
             this.buttonDetalle.UseVisualStyleBackColor = false;
+            this.buttonDetalle.Click += new System.EventHandler(this.buttonDetalles_Click);
             // 
             // buttonEliminar
             // 
