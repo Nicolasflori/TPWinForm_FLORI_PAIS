@@ -23,7 +23,9 @@ namespace Form1
             Lcodigo.Text = seleccionado.Codigo;
             Lmarca.Text = seleccionado.Marca;
 
-            Lprecio.Text = Convert.ToString(seleccionado.Precio);
+            seleccionado.Precio = Math.Round(seleccionado.Precio, 2);
+
+            Lprecio.Text = '$' + Convert.ToString(seleccionado.Precio);
 
             try
             {

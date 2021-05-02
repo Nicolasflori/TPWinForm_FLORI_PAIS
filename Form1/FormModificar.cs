@@ -18,8 +18,7 @@ namespace Form1
 
         public FormModificar(Articulos seleccionado)
         {
-
-        InitializeComponent();
+            InitializeComponent();
             ArticuloDB aux = new ArticuloDB();
             NegocioMarca negocioMarca = new NegocioMarca();
             NegocioCategoria negocioCategoria = new NegocioCategoria();
@@ -41,20 +40,18 @@ namespace Form1
             textBoxNombre.Text = aux.Nombre;
             textBoxDescripcion.Text = aux.Descripcion;
             textBoxURL.Text = aux.ImagenURl;
-            textBoxPrecio.Text = aux.Precio.ToString();  
+            numPrecio.Value = aux.Precio;  
           
             comboBoxMarca.DataSource = negocioMarca.listar();
             comboBoxMarca.SelectedIndex = aux.IdMarca -1;
 
             comboBoxCategoria.DataSource = negocioCategoria.listar();
             comboBoxCategoria.SelectedIndex = aux.IdCategoria-1;
-
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
-
         }
 
         private void buttonAcepar_Click(object sender, EventArgs e)
@@ -67,7 +64,6 @@ namespace Form1
 
             try
             {
-
                 //articulo.ID = IDSeleccionado.ID;
                 articulo.ID = this.ID;
                 articulo.Codigo = textBoxCod.Text;
@@ -82,7 +78,7 @@ namespace Form1
 
                 articulo.ImagenURl = textBoxURL.Text;
                 
-                decimal precio = decimal.Parse(textBoxPrecio.Text);
+                decimal precio = decimal.Parse(numPrecio.Value.ToString());
                 articulo.Precio = precio;
 
                 negocioArticulos.modificar(articulo);

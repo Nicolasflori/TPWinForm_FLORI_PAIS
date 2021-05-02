@@ -32,7 +32,6 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAcepar = new System.Windows.Forms.Button();
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
-            this.textBoxPrecio = new System.Windows.Forms.TextBox();
             this.textBoxURL = new System.Windows.Forms.TextBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
@@ -45,6 +44,8 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelCodigo = new System.Windows.Forms.Label();
             this.labelModificarArt = new System.Windows.Forms.Label();
+            this.numPrecio = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxCategoria
@@ -88,13 +89,6 @@
             this.comboBoxMarca.Name = "comboBoxMarca";
             this.comboBoxMarca.Size = new System.Drawing.Size(214, 21);
             this.comboBoxMarca.TabIndex = 30;
-            // 
-            // textBoxPrecio
-            // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(104, 291);
-            this.textBoxPrecio.Name = "textBoxPrecio";
-            this.textBoxPrecio.Size = new System.Drawing.Size(214, 20);
-            this.textBoxPrecio.TabIndex = 29;
             // 
             // textBoxURL
             // 
@@ -212,18 +206,32 @@
             this.labelModificarArt.TabIndex = 17;
             this.labelModificarArt.Text = "Modificar Artículo";
             // 
+            // numPrecio
+            // 
+            this.numPrecio.DecimalPlaces = 2;
+            this.numPrecio.Location = new System.Drawing.Point(105, 288);
+            this.numPrecio.Maximum = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
+            this.numPrecio.Name = "numPrecio";
+            this.numPrecio.Size = new System.Drawing.Size(213, 20);
+            this.numPrecio.TabIndex = 34;
+            this.numPrecio.ThousandsSeparator = true;
+            // 
             // FormModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(339, 381);
+            this.ClientSize = new System.Drawing.Size(349, 381);
+            this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.labelModificarArt);
             this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAcepar);
             this.Controls.Add(this.comboBoxMarca);
-            this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.textBoxURL);
             this.Controls.Add(this.textBoxDescripcion);
             this.Controls.Add(this.textBoxNombre);
@@ -238,6 +246,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Name = "FormModificar";
             this.Text = "FormModificar";
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,7 +258,6 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonAcepar;
         private System.Windows.Forms.ComboBox comboBoxMarca;
-        private System.Windows.Forms.TextBox textBoxPrecio;
         private System.Windows.Forms.TextBox textBoxURL;
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.TextBox textBoxNombre;
@@ -262,5 +270,6 @@
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelCodigo;
         private System.Windows.Forms.Label labelModificarArt;
+        private System.Windows.Forms.NumericUpDown numPrecio;
     }
 }

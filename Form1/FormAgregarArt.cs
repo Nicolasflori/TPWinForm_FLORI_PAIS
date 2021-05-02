@@ -20,12 +20,6 @@ namespace Form1
             InitializeComponent();
         }
 
-        private void textBoxPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
-                e.Handled = true;
-        }
-
         private void FormAgregarArt_Load(object sender, EventArgs e)
         {
             NegocioMarca negocioMarca = new NegocioMarca();
@@ -68,7 +62,7 @@ namespace Form1
                 articulo.IdCategoria = aux.IdMarca;
                 articulo.ImagenURl = textBoxURL.Text;
 
-                decimal precio = decimal.Parse(textBoxPrecio.Text);
+                decimal precio = decimal.Parse(numPrecio.Value.ToString());
                 articulo.Precio = precio;
 
                 negocioArticulos.agregar(articulo);

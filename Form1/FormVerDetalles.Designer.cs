@@ -151,7 +151,7 @@ namespace Form1
             this.Lprecio.AutoSize = true;
             this.Lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lprecio.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lprecio.Location = new System.Drawing.Point(111, 343);
+            this.Lprecio.Location = new System.Drawing.Point(111, 340);
             this.Lprecio.Name = "Lprecio";
             this.Lprecio.Size = new System.Drawing.Size(52, 18);
             this.Lprecio.TabIndex = 40;
@@ -162,7 +162,7 @@ namespace Form1
             this.Lcat.AutoSize = true;
             this.Lcat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lcat.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lcat.Location = new System.Drawing.Point(111, 293);
+            this.Lcat.Location = new System.Drawing.Point(111, 290);
             this.Lcat.Name = "Lcat";
             this.Lcat.Size = new System.Drawing.Size(52, 18);
             this.Lcat.TabIndex = 39;
@@ -173,7 +173,7 @@ namespace Form1
             this.Lmarca.AutoSize = true;
             this.Lmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lmarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lmarca.Location = new System.Drawing.Point(111, 243);
+            this.Lmarca.Location = new System.Drawing.Point(111, 240);
             this.Lmarca.Name = "Lmarca";
             this.Lmarca.Size = new System.Drawing.Size(52, 18);
             this.Lmarca.TabIndex = 38;
@@ -184,7 +184,7 @@ namespace Form1
             this.Ldesc.AutoSize = true;
             this.Ldesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ldesc.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Ldesc.Location = new System.Drawing.Point(113, 193);
+            this.Ldesc.Location = new System.Drawing.Point(111, 190);
             this.Ldesc.Name = "Ldesc";
             this.Ldesc.Size = new System.Drawing.Size(52, 18);
             this.Ldesc.TabIndex = 37;
@@ -195,7 +195,7 @@ namespace Form1
             this.Lcodigo.AutoSize = true;
             this.Lcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lcodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lcodigo.Location = new System.Drawing.Point(113, 143);
+            this.Lcodigo.Location = new System.Drawing.Point(111, 140);
             this.Lcodigo.Name = "Lcodigo";
             this.Lcodigo.Size = new System.Drawing.Size(52, 18);
             this.Lcodigo.TabIndex = 36;
@@ -206,7 +206,7 @@ namespace Form1
             this.Lnombre.AutoSize = true;
             this.Lnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lnombre.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lnombre.Location = new System.Drawing.Point(113, 92);
+            this.Lnombre.Location = new System.Drawing.Point(111, 89);
             this.Lnombre.Name = "Lnombre";
             this.Lnombre.Size = new System.Drawing.Size(52, 18);
             this.Lnombre.TabIndex = 35;

@@ -40,11 +40,12 @@
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.textBoxURL = new System.Windows.Forms.TextBox();
-            this.textBoxPrecio = new System.Windows.Forms.TextBox();
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.buttonAcepar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
+            this.numPrecio = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAgregarArt
@@ -163,17 +164,10 @@
             this.textBoxURL.Size = new System.Drawing.Size(214, 20);
             this.textBoxURL.TabIndex = 11;
             // 
-            // textBoxPrecio
-            // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(108, 291);
-            this.textBoxPrecio.Name = "textBoxPrecio";
-            this.textBoxPrecio.Size = new System.Drawing.Size(214, 20);
-            this.textBoxPrecio.TabIndex = 12;
-            this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
-            // 
             // comboBoxMarca
             // 
             this.comboBoxMarca.DisplayMember = "Descripcion";
+            this.comboBoxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarca.FormattingEnabled = true;
             this.comboBoxMarca.Location = new System.Drawing.Point(108, 177);
             this.comboBoxMarca.Name = "comboBoxMarca";
@@ -207,11 +201,26 @@
             // comboBoxCategoria
             // 
             this.comboBoxCategoria.DisplayMember = "Descripcion";
+            this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Location = new System.Drawing.Point(108, 215);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(214, 21);
             this.comboBoxCategoria.TabIndex = 16;
+            // 
+            // numPrecio
+            // 
+            this.numPrecio.DecimalPlaces = 2;
+            this.numPrecio.Location = new System.Drawing.Point(109, 288);
+            this.numPrecio.Maximum = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
+            this.numPrecio.Name = "numPrecio";
+            this.numPrecio.Size = new System.Drawing.Size(213, 20);
+            this.numPrecio.TabIndex = 17;
+            this.numPrecio.ThousandsSeparator = true;
             // 
             // FormAgregarArt
             // 
@@ -219,11 +228,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(351, 383);
+            this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAcepar);
             this.Controls.Add(this.comboBoxMarca);
-            this.Controls.Add(this.textBoxPrecio);
             this.Controls.Add(this.textBoxURL);
             this.Controls.Add(this.textBoxDescripcion);
             this.Controls.Add(this.textBoxNombre);
@@ -240,6 +249,7 @@
             this.Name = "FormAgregarArt";
             this.Text = "FormAgregarArt";
             this.Load += new System.EventHandler(this.FormAgregarArt_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,10 +269,10 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.TextBox textBoxURL;
-        private System.Windows.Forms.TextBox textBoxPrecio;
         private System.Windows.Forms.ComboBox comboBoxMarca;
         private System.Windows.Forms.Button buttonAcepar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.ComboBox comboBoxCategoria;
+        private System.Windows.Forms.NumericUpDown numPrecio;
     }
 }

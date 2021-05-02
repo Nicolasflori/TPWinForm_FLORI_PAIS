@@ -31,6 +31,8 @@ namespace Negocio
                     aux.Categoria = (string)datos.Lector["Categoria"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
+                    aux.Precio = Math.Round(aux.Precio, 2);
+
                     lista.Add(aux);
 
                 }

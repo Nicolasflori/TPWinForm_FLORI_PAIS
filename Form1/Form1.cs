@@ -19,7 +19,6 @@ namespace Form1
         private void Form1_Load(object sender, EventArgs e)
         {
             cargarGrilla();
-
         }
         private void cargarGrilla()
         {
@@ -77,7 +76,7 @@ namespace Form1
             NegocioArticulos negocio = new NegocioArticulos();
             try
             {
-                if (MessageBox.Show("¿Estás seguro de eliminar el Articulo Seleccionado?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Está seguro que desea eliminar el Articulo Seleccionado?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     negocio.eliminar(seleccionado.ID);
                     cargarGrilla();
@@ -121,7 +120,6 @@ namespace Form1
                 dataGridViewPrincipal.DataSource = null;
                 dataGridViewPrincipal.DataSource = listaFiltrada;
                 dataGridViewPrincipal.Columns["ImagenUrl"].Visible = false;
-
             }
             else
             {
