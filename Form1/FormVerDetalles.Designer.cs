@@ -52,7 +52,7 @@ namespace Form1
             this.Detalles.AutoSize = true;
             this.Detalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Detalles.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Detalles.Location = new System.Drawing.Point(12, 21);
+            this.Detalles.Location = new System.Drawing.Point(12, 19);
             this.Detalles.Name = "Detalles";
             this.Detalles.Size = new System.Drawing.Size(368, 42);
             this.Detalles.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace Form1
             this.buttonAtras.BackColor = System.Drawing.Color.SlateBlue;
             this.buttonAtras.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAtras.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonAtras.Location = new System.Drawing.Point(19, 391);
+            this.buttonAtras.Location = new System.Drawing.Point(19, 329);
             this.buttonAtras.Name = "buttonAtras";
             this.buttonAtras.Size = new System.Drawing.Size(131, 38);
             this.buttonAtras.TabIndex = 15;
@@ -76,7 +76,7 @@ namespace Form1
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelNombre.Location = new System.Drawing.Point(37, 89);
+            this.labelNombre.Location = new System.Drawing.Point(33, 92);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(70, 18);
             this.labelNombre.TabIndex = 16;
@@ -87,7 +87,7 @@ namespace Form1
             this.labelCódigo.AutoSize = true;
             this.labelCódigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCódigo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelCódigo.Location = new System.Drawing.Point(45, 140);
+            this.labelCódigo.Location = new System.Drawing.Point(41, 129);
             this.labelCódigo.Name = "labelCódigo";
             this.labelCódigo.Size = new System.Drawing.Size(60, 18);
             this.labelCódigo.TabIndex = 17;
@@ -98,7 +98,7 @@ namespace Form1
             this.labelDescripcion.AutoSize = true;
             this.labelDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescripcion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDescripcion.Location = new System.Drawing.Point(14, 190);
+            this.labelDescripcion.Location = new System.Drawing.Point(12, 165);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(91, 18);
             this.labelDescripcion.TabIndex = 18;
@@ -109,7 +109,7 @@ namespace Form1
             this.labelMarca.AutoSize = true;
             this.labelMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMarca.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelMarca.Location = new System.Drawing.Point(51, 240);
+            this.labelMarca.Location = new System.Drawing.Point(46, 202);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(54, 18);
             this.labelMarca.TabIndex = 19;
@@ -120,7 +120,7 @@ namespace Form1
             this.labelCategoria.AutoSize = true;
             this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategoria.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelCategoria.Location = new System.Drawing.Point(31, 290);
+            this.labelCategoria.Location = new System.Drawing.Point(27, 241);
             this.labelCategoria.Name = "labelCategoria";
             this.labelCategoria.Size = new System.Drawing.Size(76, 18);
             this.labelCategoria.TabIndex = 20;
@@ -131,7 +131,7 @@ namespace Form1
             this.labelPrecio.AutoSize = true;
             this.labelPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrecio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelPrecio.Location = new System.Drawing.Point(50, 340);
+            this.labelPrecio.Location = new System.Drawing.Point(46, 279);
             this.labelPrecio.Name = "labelPrecio";
             this.labelPrecio.Size = new System.Drawing.Size(55, 18);
             this.labelPrecio.TabIndex = 21;
@@ -139,7 +139,7 @@ namespace Form1
             // 
             // PictureBoxDetalles
             // 
-            this.PictureBoxDetalles.Location = new System.Drawing.Point(479, 92);
+            this.PictureBoxDetalles.Location = new System.Drawing.Point(458, 83);
             this.PictureBoxDetalles.Name = "PictureBoxDetalles";
             this.PictureBoxDetalles.Size = new System.Drawing.Size(295, 264);
             this.PictureBoxDetalles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +151,7 @@ namespace Form1
             this.Lprecio.AutoSize = true;
             this.Lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lprecio.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lprecio.Location = new System.Drawing.Point(111, 340);
+            this.Lprecio.Location = new System.Drawing.Point(107, 279);
             this.Lprecio.Name = "Lprecio";
             this.Lprecio.Size = new System.Drawing.Size(52, 18);
             this.Lprecio.TabIndex = 40;
@@ -162,7 +162,7 @@ namespace Form1
             this.Lcat.AutoSize = true;
             this.Lcat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lcat.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lcat.Location = new System.Drawing.Point(111, 290);
+            this.Lcat.Location = new System.Drawing.Point(107, 241);
             this.Lcat.Name = "Lcat";
             this.Lcat.Size = new System.Drawing.Size(52, 18);
             this.Lcat.TabIndex = 39;
@@ -173,7 +173,7 @@ namespace Form1
             this.Lmarca.AutoSize = true;
             this.Lmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lmarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lmarca.Location = new System.Drawing.Point(111, 240);
+            this.Lmarca.Location = new System.Drawing.Point(106, 202);
             this.Lmarca.Name = "Lmarca";
             this.Lmarca.Size = new System.Drawing.Size(52, 18);
             this.Lmarca.TabIndex = 38;
@@ -184,7 +184,7 @@ namespace Form1
             this.Ldesc.AutoSize = true;
             this.Ldesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ldesc.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Ldesc.Location = new System.Drawing.Point(111, 190);
+            this.Ldesc.Location = new System.Drawing.Point(109, 165);
             this.Ldesc.Name = "Ldesc";
             this.Ldesc.Size = new System.Drawing.Size(52, 18);
             this.Ldesc.TabIndex = 37;
@@ -195,7 +195,7 @@ namespace Form1
             this.Lcodigo.AutoSize = true;
             this.Lcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lcodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lcodigo.Location = new System.Drawing.Point(111, 140);
+            this.Lcodigo.Location = new System.Drawing.Point(107, 129);
             this.Lcodigo.Name = "Lcodigo";
             this.Lcodigo.Size = new System.Drawing.Size(52, 18);
             this.Lcodigo.TabIndex = 36;
@@ -206,7 +206,7 @@ namespace Form1
             this.Lnombre.AutoSize = true;
             this.Lnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lnombre.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Lnombre.Location = new System.Drawing.Point(111, 89);
+            this.Lnombre.Location = new System.Drawing.Point(107, 92);
             this.Lnombre.Name = "Lnombre";
             this.Lnombre.Size = new System.Drawing.Size(52, 18);
             this.Lnombre.TabIndex = 35;
@@ -217,7 +217,7 @@ namespace Form1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(778, 386);
             this.Controls.Add(this.Lprecio);
             this.Controls.Add(this.Lcat);
             this.Controls.Add(this.Lmarca);

@@ -29,6 +29,7 @@ namespace Form1
                 listaArticulos = negocio.listar();
                 dataGridViewPrincipal.DataSource = listaArticulos;
                 dataGridViewPrincipal.Columns["ImagenUrl"].Visible = false;
+                LOGO.Load("https://topcbd.deals/wp-content/uploads/2020/01/farmacy.png");
                 cargarImagen(listaArticulos[0].ImagenURl);
             }
             catch (Exception ex)
