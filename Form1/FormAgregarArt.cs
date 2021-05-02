@@ -47,7 +47,7 @@ namespace Form1
             Close();
         }
 
-        private void buttonAcepar_Click(object sender, EventArgs e)
+        private void buttonAceptar_Click(object sender, EventArgs e)
         {
             NegocioArticulos negocioArticulos = new NegocioArticulos();
             
@@ -66,10 +66,11 @@ namespace Form1
 
                 aux.IdCategoria = getIDCat(comboBoxCategoria.Text);
                 articulo.IdCategoria = aux.IdMarca;
-
                 articulo.ImagenURl = textBoxURL.Text;
-                string a = textBoxPrecio.Text; 
-                articulo.Precio =a.Length;
+
+                decimal precio = decimal.Parse(textBoxPrecio.Text);
+                articulo.Precio = precio;
+
                 negocioArticulos.agregar(articulo);
                 Close();
             }

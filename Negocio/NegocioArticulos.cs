@@ -52,7 +52,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores ="values(" + "'" + nuevo.Codigo + "'" + ", '"+nuevo.Nombre+ "'" + ", '" +nuevo.Descripcion + "'" + ", " +nuevo.IdMarca + ", " +nuevo.IdCategoria+ ", '" + nuevo.ImagenURl + "'" + ","+ nuevo.Precio+")";
+                string valores ="values(" + "'" + nuevo.Codigo + "'" + ", '"+nuevo.Nombre+ "'" + ", '" +nuevo.Descripcion + "'" + ", " +nuevo.IdMarca + ", " +nuevo.IdCategoria+ ", '" + nuevo.ImagenURl + "'" + ", '"+ nuevo.Precio+"')";
                 datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenuRL, Precio)" + valores);
                 datos.ejectutarAccion();
             }
@@ -71,7 +71,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta( "Update ARTICULOS SET Codigo= ' " + nuevo.Codigo + " ', nombre= ' " + nuevo.Nombre + " ', IdMarca= " + nuevo.IdMarca + ", IdCategoria= " + nuevo.IdCategoria + ", ImagenURL= ' " + nuevo.ImagenURl + "', Precio= '" + nuevo.Precio + " ' WHERE id= " + nuevo.ID + ")");
+                datos.setearConsulta( "Update ARTICULOS SET Codigo= '" + nuevo.Codigo + "', nombre= '" + nuevo.Nombre + "', IdMarca= " + nuevo.IdMarca + ", IdCategoria= " + nuevo.IdCategoria + ", ImagenURL= '" + nuevo.ImagenURl + "', Precio= '" + nuevo.Precio + "' WHERE id= " + nuevo.ID);
                 datos.ejectutarAccion();
             }
             catch (Exception ex)

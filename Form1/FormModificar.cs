@@ -14,23 +14,25 @@ namespace Form1
 {
     public partial class FormModificar : Form
     {
+        public  int ID { get; }
+
         public FormModificar(Articulos seleccionado)
         {
-            InitializeComponent();
+
+        InitializeComponent();
             ArticuloDB aux = new ArticuloDB();
             NegocioMarca negocioMarca = new NegocioMarca();
             NegocioCategoria negocioCategoria = new NegocioCategoria();
-
-
+            ID = seleccionado.ID;
             aux.ID = seleccionado.ID;
             aux.Codigo = seleccionado.Codigo;
             aux.Nombre = seleccionado.Nombre;
             aux.ImagenURl = seleccionado.ImagenURl;
             aux.Descripcion = seleccionado.Descripcion;
             aux.Precio = seleccionado.Precio;
+
             string descripcionMarca = seleccionado.Marca;
             aux.IdMarca = getIDMarca(descripcionMarca);
-
 
             string descripcionCat = seleccionado.Categoria;
             aux.IdCategoria = getIDCat(descripcionCat);
@@ -39,20 +41,13 @@ namespace Form1
             textBoxNombre.Text = aux.Nombre;
             textBoxDescripcion.Text = aux.Descripcion;
             textBoxURL.Text = aux.ImagenURl;
-            textBoxPrecio.Text = aux.Precio.ToString();
-            
+            textBoxPrecio.Text = aux.Precio.ToString();  
           
-           comboBoxMarca.DataSource = negocioMarca.listar();
-           comboBoxMarca.SelectedIndex = aux.IdMarca -1;
+            comboBoxMarca.DataSource = negocioMarca.listar();
+            comboBoxMarca.SelectedIndex = aux.IdMarca -1;
 
-
-           comboBoxCategoria.DataSource = negocioCategoria.listar();
-           comboBoxCategoria.SelectedIndex = aux.IdCategoria-1; 
-
-
-
-
-
+            comboBoxCategoria.DataSource = negocioCategoria.listar();
+            comboBoxCategoria.SelectedIndex = aux.IdCategoria-1;
 
         }
 
@@ -67,9 +62,14 @@ namespace Form1
             NegocioArticulos negocioArticulos = new NegocioArticulos();
             ArticuloDB articulo = new ArticuloDB();
             ArticuloDB aux = new ArticuloDB();
+            Articulos id = new Articulos();
+            FormModificar IDSeleccionado = new FormModificar(id);
 
             try
             {
+
+                //articulo.ID = IDSeleccionado.ID;
+                articulo.ID = this.ID;
                 articulo.Codigo = textBoxCod.Text;
                 articulo.Nombre = textBoxNombre.Text;
                 articulo.Descripcion = textBoxDescripcion.Text;
@@ -81,8 +81,9 @@ namespace Form1
                 articulo.IdCategoria = aux.IdMarca;
 
                 articulo.ImagenURl = textBoxURL.Text;
-                string a = textBoxPrecio.Text;
-                articulo.Precio = a.Length;
+                
+                decimal precio = decimal.Parse(textBoxPrecio.Text);
+                articulo.Precio = precio;
 
                 negocioArticulos.modificar(articulo);
                 Close();

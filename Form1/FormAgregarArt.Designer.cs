@@ -190,7 +190,7 @@
             this.buttonAcepar.TabIndex = 14;
             this.buttonAcepar.Text = "Aceptar";
             this.buttonAcepar.UseVisualStyleBackColor = false;
-            this.buttonAcepar.Click += new System.EventHandler(this.buttonAcepar_Click);
+            this.buttonAcepar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonCancelar
             // 
