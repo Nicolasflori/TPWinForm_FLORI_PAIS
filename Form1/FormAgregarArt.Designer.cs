@@ -44,6 +44,7 @@
             this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.buttonAcepar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelAgregarArt
@@ -189,6 +190,7 @@
             this.buttonAcepar.TabIndex = 14;
             this.buttonAcepar.Text = "Aceptar";
             this.buttonAcepar.UseVisualStyleBackColor = false;
+            this.buttonAcepar.Click += new System.EventHandler(this.buttonAcepar_Click);
             // 
             // buttonCancelar
             // 
@@ -202,12 +204,22 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // comboBoxCategoria
+            // 
+            this.comboBoxCategoria.DisplayMember = "Descripcion";
+            this.comboBoxCategoria.FormattingEnabled = true;
+            this.comboBoxCategoria.Location = new System.Drawing.Point(108, 215);
+            this.comboBoxCategoria.Name = "comboBoxCategoria";
+            this.comboBoxCategoria.Size = new System.Drawing.Size(214, 21);
+            this.comboBoxCategoria.TabIndex = 16;
+            // 
             // FormAgregarArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(351, 383);
+            this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAcepar);
             this.Controls.Add(this.comboBoxMarca);
@@ -251,5 +263,6 @@
         private System.Windows.Forms.ComboBox comboBoxMarca;
         private System.Windows.Forms.Button buttonAcepar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.ComboBox comboBoxCategoria;
     }
 }

@@ -14,6 +14,7 @@ namespace Form1
 {
     public partial class FormAgregarArt : Form
     {
+       
         public FormAgregarArt()
         {
             InitializeComponent();
@@ -28,9 +29,11 @@ namespace Form1
         private void FormAgregarArt_Load(object sender, EventArgs e)
         {
             NegocioMarca negocioMarca = new NegocioMarca();
+            NegocioCategoria negocioCategoria = new NegocioCategoria();
             try
             {
                 comboBoxMarca.DataSource = negocioMarca.listar();
+                comboBoxCategoria.DataSource = negocioCategoria.listar();
             }
             catch (Exception ex)
             {
@@ -43,5 +46,74 @@ namespace Form1
         {
             Close();
         }
+
+        private void buttonAcepar_Click(object sender, EventArgs e)
+        {
+            NegocioArticulos negocioArticulos = new NegocioArticulos();
+            
+            NegocioCategoria catAux = new NegocioCategoria();
+            ArticuloDB articulo = new ArticuloDB();
+            ArticuloDB aux = new ArticuloDB();
+
+            try
+            {       
+                articulo.Codigo = textBoxCod.Text;
+                articulo.Nombre = textBoxNombre.Text;
+                articulo.Descripcion = textBoxDescripcion.Text;
+
+                aux.IdMarca = getIDMarca(comboBoxMarca.Text);
+                articulo.IdMarca = aux.IdMarca;
+
+                aux.IdCategoria = getIDCat(comboBoxCategoria.Text);
+                articulo.IdCategoria = aux.IdMarca;
+
+                articulo.ImagenURl = textBoxURL.Text;
+                string a = textBoxPrecio.Text; 
+                articulo.Precio =a.Length;
+                negocioArticulos.agregar(articulo);
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private int getIDMarca(string descripcion)
+        {
+            List<Marca> lista = new List<Marca>();
+            NegocioMarca marcaAux = new NegocioMarca();
+            int idMarca = 0;
+
+            lista = marcaAux.listar();
+
+            for (var i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Descripcion == descripcion)
+                {
+                    idMarca = lista[i].ID;
+                }
+            }
+            return idMarca;
+        }
+
+        private int getIDCat(string descripcion)
+        {
+            List<Categoria> lista = new List<Categoria>();
+            NegocioCategoria catAux = new NegocioCategoria();
+            int idCat = 0;
+
+            lista = catAux.listar();
+
+            for (var i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Descripcion == descripcion)
+                {
+                    idCat = lista[i].ID;
+                }
+            }
+            return idCat;
+        }
+
     }
 }
