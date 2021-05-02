@@ -66,6 +66,26 @@ namespace Negocio
             }
         }
 
+        public void modificar (ArticuloDB nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta( "Update ARTICULOS SET Codigo= ' " + nuevo.Codigo + " ', nombre= ' " + nuevo.Nombre + " ', IdMarca= " + nuevo.IdMarca + ", IdCategoria= " + nuevo.IdCategoria + ", ImagenURL= ' " + nuevo.ImagenURl + "', Precio= '" + nuevo.Precio + " ' WHERE id= " + nuevo.ID + ")");
+                datos.ejectutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public void eliminar(int id)
         {
             AccesoDatos datos = new AccesoDatos();

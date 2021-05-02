@@ -88,5 +88,13 @@ namespace Form1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            Articulos seleccionado = (Articulos)dataGridViewPrincipal.CurrentRow.DataBoundItem;
+            FormModificar modificar = new FormModificar(seleccionado);
+            modificar.ShowDialog();
+            cargarGrilla();
+        }
     }
 }
