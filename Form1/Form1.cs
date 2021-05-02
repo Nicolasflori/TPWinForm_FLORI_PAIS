@@ -70,5 +70,23 @@ namespace Form1
             FormVerDetalles detalle = new FormVerDetalles();
             detalle.ShowDialog();
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            Articulos seleccionado = (Articulos)dataGridViewPrincipal.CurrentRow.DataBoundItem;
+            NegocioArticulos negocio = new NegocioArticulos();
+            try
+            {
+                if (MessageBox.Show("¿Estás seguro de eliminar el Articulo Seleccionado?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    negocio.eliminar(seleccionado.ID);
+                    cargarGrilla();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
