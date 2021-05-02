@@ -61,6 +61,8 @@ namespace Form1
         {
             FormAgregarArt agregar = new FormAgregarArt();
             agregar.ShowDialog();
+            cargarGrilla();
+
         }
     }
 }

@@ -15,5 +15,7 @@ namespace Dominio
             ID = id;
             Descripcion = descripcion;
         }
+
+        
     }
 }
