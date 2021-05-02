@@ -102,5 +102,33 @@ namespace Form1
             Articulos seleccionado = (Articulos)dataGridViewPrincipal.CurrentRow.DataBoundItem;
             return seleccionado;
         }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            buscar();
+        }
+        private void buscar()
+        {
+            List<Articulos> listaFiltrada;
+            if (textBoxFiltrar.Text != "")
+            {
+                listaFiltrada = listaArticulos.FindAll(x => x.Descripcion.ToUpper().Contains(textBoxFiltrar.Text.ToUpper()) || x.Codigo.ToUpper().Contains(textBoxFiltrar.Text.ToUpper()) || x.Nombre.ToUpper().Contains(textBoxFiltrar.Text.ToUpper()) || x.Categoria.ToUpper().Contains(textBoxFiltrar.Text.ToUpper()) || x.Marca.ToUpper().Contains(textBoxFiltrar.Text.ToUpper()));
+                dataGridViewPrincipal.DataSource = null;
+                dataGridViewPrincipal.DataSource = listaFiltrada;
+                dataGridViewPrincipal.Columns["ImagenUrl"].Visible = false;
+
+            }
+            else
+            {
+                dataGridViewPrincipal.DataSource = null;
+                dataGridViewPrincipal.DataSource = listaArticulos;
+                dataGridViewPrincipal.Columns["ImagenUrl"].Visible = false;
+            }
+        }
     }
 }

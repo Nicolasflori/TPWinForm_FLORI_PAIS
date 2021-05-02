@@ -34,13 +34,16 @@ namespace Form1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitulo = new System.Windows.Forms.Label();
-            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.buttonBuscarAvanzada = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonDetalle = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.dataGridViewPrincipal = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelFiltrar = new System.Windows.Forms.Label();
+            this.textBoxFiltrar = new System.Windows.Forms.TextBox();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,23 +54,23 @@ namespace Form1
             this.labelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.labelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelTitulo.Location = new System.Drawing.Point(25, 19);
+            this.labelTitulo.Location = new System.Drawing.Point(25, -5);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(287, 73);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Artículos";
             // 
-            // buttonBuscar
+            // buttonBuscarAvanzada
             // 
-            this.buttonBuscar.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonBuscar.Location = new System.Drawing.Point(22, 454);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(144, 55);
-            this.buttonBuscar.TabIndex = 2;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscarAvanzada.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.buttonBuscarAvanzada.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonBuscarAvanzada.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonBuscarAvanzada.Location = new System.Drawing.Point(22, 454);
+            this.buttonBuscarAvanzada.Name = "buttonBuscarAvanzada";
+            this.buttonBuscarAvanzada.Size = new System.Drawing.Size(144, 55);
+            this.buttonBuscarAvanzada.TabIndex = 2;
+            this.buttonBuscarAvanzada.Text = "Busqueda Avanzada";
+            this.buttonBuscarAvanzada.UseVisualStyleBackColor = false;
             // 
             // buttonAgregar
             // 
@@ -167,19 +170,53 @@ namespace Form1
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // labelFiltrar
+            // 
+            this.labelFiltrar.AutoSize = true;
+            this.labelFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFiltrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelFiltrar.Location = new System.Drawing.Point(19, 73);
+            this.labelFiltrar.Name = "labelFiltrar";
+            this.labelFiltrar.Size = new System.Drawing.Size(49, 18);
+            this.labelFiltrar.TabIndex = 9;
+            this.labelFiltrar.Text = "Filtrar:";
+            // 
+            // textBoxFiltrar
+            // 
+            this.textBoxFiltrar.Location = new System.Drawing.Point(73, 72);
+            this.textBoxFiltrar.Name = "textBoxFiltrar";
+            this.textBoxFiltrar.Size = new System.Drawing.Size(596, 20);
+            this.textBoxFiltrar.TabIndex = 10;
+            this.textBoxFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.buttonBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonBuscar.Location = new System.Drawing.Point(681, 72);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(84, 19);
+            this.buttonBuscar.TabIndex = 11;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1087, 522);
+            this.Controls.Add(this.buttonBuscar);
+            this.Controls.Add(this.textBoxFiltrar);
+            this.Controls.Add(this.labelFiltrar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewPrincipal);
             this.Controls.Add(this.buttonDetalle);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.buttonAgregar);
-            this.Controls.Add(this.buttonBuscar);
+            this.Controls.Add(this.buttonBuscarAvanzada);
             this.Controls.Add(this.labelTitulo);
             this.Name = "Form1";
             this.Text = "Aplicación TP WinForm";
@@ -194,13 +231,16 @@ namespace Form1
         #endregion
 
         private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.Button buttonBuscarAvanzada;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Button buttonDetalle;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.DataGridView dataGridViewPrincipal;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelFiltrar;
+        private System.Windows.Forms.TextBox textBoxFiltrar;
+        private System.Windows.Forms.Button buttonBuscar;
     }
 }
 
