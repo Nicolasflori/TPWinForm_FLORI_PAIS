@@ -38,12 +38,12 @@ namespace Form1
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelPrecio = new System.Windows.Forms.Label();
             this.PictureBoxDetalles = new System.Windows.Forms.PictureBox();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.textBoxCódigo = new System.Windows.Forms.TextBox();
-            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
-            this.textBoxMarca = new System.Windows.Forms.TextBox();
-            this.textBoxCategoria = new System.Windows.Forms.TextBox();
-            this.textBoxPrecio = new System.Windows.Forms.TextBox();
+            this.Lprecio = new System.Windows.Forms.Label();
+            this.Lcat = new System.Windows.Forms.Label();
+            this.Lmarca = new System.Windows.Forms.Label();
+            this.Ldesc = new System.Windows.Forms.Label();
+            this.Lcodigo = new System.Windows.Forms.Label();
+            this.Lnombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxDetalles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,53 +146,71 @@ namespace Form1
             this.PictureBoxDetalles.TabIndex = 22;
             this.PictureBoxDetalles.TabStop = false;
             // 
-            // textBoxNombre
+            // Lprecio
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(113, 90);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.ReadOnly = true;
-            this.textBoxNombre.Size = new System.Drawing.Size(347, 20);
-            this.textBoxNombre.TabIndex = 23;
+            this.Lprecio.AutoSize = true;
+            this.Lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lprecio.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Lprecio.Location = new System.Drawing.Point(111, 343);
+            this.Lprecio.Name = "Lprecio";
+            this.Lprecio.Size = new System.Drawing.Size(52, 18);
+            this.Lprecio.TabIndex = 40;
+            this.Lprecio.Text = "label6";
             // 
-            // textBoxCódigo
+            // Lcat
             // 
-            this.textBoxCódigo.Location = new System.Drawing.Point(113, 140);
-            this.textBoxCódigo.Name = "textBoxCódigo";
-            this.textBoxCódigo.ReadOnly = true;
-            this.textBoxCódigo.Size = new System.Drawing.Size(347, 20);
-            this.textBoxCódigo.TabIndex = 24;
+            this.Lcat.AutoSize = true;
+            this.Lcat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lcat.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Lcat.Location = new System.Drawing.Point(111, 293);
+            this.Lcat.Name = "Lcat";
+            this.Lcat.Size = new System.Drawing.Size(52, 18);
+            this.Lcat.TabIndex = 39;
+            this.Lcat.Text = "label5";
             // 
-            // textBoxDescripcion
+            // Lmarca
             // 
-            this.textBoxDescripcion.Location = new System.Drawing.Point(113, 190);
-            this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.ReadOnly = true;
-            this.textBoxDescripcion.Size = new System.Drawing.Size(347, 20);
-            this.textBoxDescripcion.TabIndex = 25;
+            this.Lmarca.AutoSize = true;
+            this.Lmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lmarca.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Lmarca.Location = new System.Drawing.Point(111, 243);
+            this.Lmarca.Name = "Lmarca";
+            this.Lmarca.Size = new System.Drawing.Size(52, 18);
+            this.Lmarca.TabIndex = 38;
+            this.Lmarca.Text = "label4";
             // 
-            // textBoxMarca
+            // Ldesc
             // 
-            this.textBoxMarca.Location = new System.Drawing.Point(113, 240);
-            this.textBoxMarca.Name = "textBoxMarca";
-            this.textBoxMarca.ReadOnly = true;
-            this.textBoxMarca.Size = new System.Drawing.Size(347, 20);
-            this.textBoxMarca.TabIndex = 26;
+            this.Ldesc.AutoSize = true;
+            this.Ldesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ldesc.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Ldesc.Location = new System.Drawing.Point(113, 193);
+            this.Ldesc.Name = "Ldesc";
+            this.Ldesc.Size = new System.Drawing.Size(52, 18);
+            this.Ldesc.TabIndex = 37;
+            this.Ldesc.Text = "label3";
             // 
-            // textBoxCategoria
+            // Lcodigo
             // 
-            this.textBoxCategoria.Location = new System.Drawing.Point(113, 290);
-            this.textBoxCategoria.Name = "textBoxCategoria";
-            this.textBoxCategoria.ReadOnly = true;
-            this.textBoxCategoria.Size = new System.Drawing.Size(347, 20);
-            this.textBoxCategoria.TabIndex = 27;
+            this.Lcodigo.AutoSize = true;
+            this.Lcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lcodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Lcodigo.Location = new System.Drawing.Point(113, 143);
+            this.Lcodigo.Name = "Lcodigo";
+            this.Lcodigo.Size = new System.Drawing.Size(52, 18);
+            this.Lcodigo.TabIndex = 36;
+            this.Lcodigo.Text = "label2";
             // 
-            // textBoxPrecio
+            // Lnombre
             // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(113, 340);
-            this.textBoxPrecio.Name = "textBoxPrecio";
-            this.textBoxPrecio.ReadOnly = true;
-            this.textBoxPrecio.Size = new System.Drawing.Size(347, 20);
-            this.textBoxPrecio.TabIndex = 28;
+            this.Lnombre.AutoSize = true;
+            this.Lnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lnombre.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Lnombre.Location = new System.Drawing.Point(113, 92);
+            this.Lnombre.Name = "Lnombre";
+            this.Lnombre.Size = new System.Drawing.Size(52, 18);
+            this.Lnombre.TabIndex = 35;
+            this.Lnombre.Text = "label1";
             // 
             // FormVerDetalles
             // 
@@ -200,12 +218,12 @@ namespace Form1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBoxPrecio);
-            this.Controls.Add(this.textBoxCategoria);
-            this.Controls.Add(this.textBoxMarca);
-            this.Controls.Add(this.textBoxDescripcion);
-            this.Controls.Add(this.textBoxCódigo);
-            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.Lprecio);
+            this.Controls.Add(this.Lcat);
+            this.Controls.Add(this.Lmarca);
+            this.Controls.Add(this.Ldesc);
+            this.Controls.Add(this.Lcodigo);
+            this.Controls.Add(this.Lnombre);
             this.Controls.Add(this.PictureBoxDetalles);
             this.Controls.Add(this.labelPrecio);
             this.Controls.Add(this.labelCategoria);
@@ -234,11 +252,11 @@ namespace Form1
         private System.Windows.Forms.Label labelCategoria;
         private System.Windows.Forms.Label labelPrecio;
         private System.Windows.Forms.PictureBox PictureBoxDetalles;
-        private System.Windows.Forms.TextBox textBoxNombre;
-        private System.Windows.Forms.TextBox textBoxCódigo;
-        private System.Windows.Forms.TextBox textBoxDescripcion;
-        private System.Windows.Forms.TextBox textBoxMarca;
-        private System.Windows.Forms.TextBox textBoxCategoria;
-        private System.Windows.Forms.TextBox textBoxPrecio;
+        private System.Windows.Forms.Label Lprecio;
+        private System.Windows.Forms.Label Lcat;
+        private System.Windows.Forms.Label Lmarca;
+        private System.Windows.Forms.Label Ldesc;
+        private System.Windows.Forms.Label Lcodigo;
+        private System.Windows.Forms.Label Lnombre;
     }
 }

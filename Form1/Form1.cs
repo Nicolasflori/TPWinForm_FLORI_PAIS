@@ -47,9 +47,8 @@ namespace Form1
             }
             catch (Exception)
             {
-                MessageBox.Show("No se pudo encontrar la imagen");
+                pictureBox1.Load("https://www.freundferreteria.com/Productos/GetImagenProductoPrincipal?idProducto=f3d7edf5-20b4-4688-b6b2-ace3de7e219c&width=250&height=250&qa=75&ext=.jpg");
             }
-
         }
 
         private void cargarImagen(string imagen)
@@ -67,13 +66,14 @@ namespace Form1
 
         private void buttonDetalles_Click(object sender, EventArgs e)
         {
-            FormVerDetalles detalle = new FormVerDetalles();
+            Articulos seleccionado = getCurrentArticulo();
+            FormVerDetalles detalle = new FormVerDetalles(seleccionado);
             detalle.ShowDialog();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            Articulos seleccionado = (Articulos)dataGridViewPrincipal.CurrentRow.DataBoundItem;
+            Articulos seleccionado = getCurrentArticulo();
             NegocioArticulos negocio = new NegocioArticulos();
             try
             {
@@ -95,6 +95,12 @@ namespace Form1
             FormModificar modificar = new FormModificar(seleccionado);
             modificar.ShowDialog();
             cargarGrilla();
+        }
+
+        public Articulos getCurrentArticulo()
+        {
+            Articulos seleccionado = (Articulos)dataGridViewPrincipal.CurrentRow.DataBoundItem;
+            return seleccionado;
         }
     }
 }
