@@ -20,6 +20,7 @@ namespace Form1
         {
             cargarGrilla();
         }
+
         private void cargarGrilla()
         {
             NegocioArticulos negocio = new NegocioArticulos();
@@ -61,7 +62,6 @@ namespace Form1
             FormAgregarArt agregar = new FormAgregarArt();
             agregar.ShowDialog();
             cargarGrilla();
-
         }
 
         private void buttonDetalles_Click(object sender, EventArgs e)

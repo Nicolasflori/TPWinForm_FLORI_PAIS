@@ -34,7 +34,6 @@ namespace Negocio
                     aux.Precio = Math.Round(aux.Precio, 2);
 
                     lista.Add(aux);
-
                 }
                 return lista;
             }
@@ -73,14 +72,12 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta( "Update ARTICULOS SET Codigo= '" + nuevo.Codigo + "', nombre= '" + nuevo.Nombre + "', IdMarca= " + nuevo.IdMarca + ", IdCategoria= " + nuevo.IdCategoria + ", ImagenURL= '" + nuevo.ImagenURl + "', Precio= '" + nuevo.Precio + "' WHERE id= " + nuevo.ID);
+                datos.setearConsulta( "Update ARTICULOS SET Codigo= '" + nuevo.Codigo + "', nombre= '" + nuevo.Nombre + "', Descripcion= '" +nuevo.Descripcion  + "', IdMarca= " + nuevo.IdMarca + ", IdCategoria= " + nuevo.IdCategoria + ", ImagenURL= '" + nuevo.ImagenURl + "', Precio= '" + nuevo.Precio + "' WHERE id= " + nuevo.ID);
                 datos.ejectutarAccion();
             }
             catch (Exception ex)
             {
-
                 throw ex;
-
             }
             finally
             {
@@ -103,9 +100,7 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
-
             }
-
         }
     }
 }

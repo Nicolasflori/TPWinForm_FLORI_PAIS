@@ -14,12 +14,10 @@ namespace Form1
 {
     public partial class FormAgregarArt : Form
     {
-       
         public FormAgregarArt()
         {
             InitializeComponent();
         }
-
         private void FormAgregarArt_Load(object sender, EventArgs e)
         {
             NegocioMarca negocioMarca = new NegocioMarca();
@@ -31,7 +29,6 @@ namespace Form1
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -47,19 +44,19 @@ namespace Form1
             
             NegocioCategoria catAux = new NegocioCategoria();
             ArticuloDB articulo = new ArticuloDB();
-            ArticuloDB aux = new ArticuloDB();
 
             try
-            {       
+            {
+                ArticuloDB aux = new ArticuloDB();
                 articulo.Codigo = textBoxCod.Text;
                 articulo.Nombre = textBoxNombre.Text;
                 articulo.Descripcion = textBoxDescripcion.Text;
 
                 aux.IdMarca = getIDMarca(comboBoxMarca.Text);
                 articulo.IdMarca = aux.IdMarca;
-
+                
                 aux.IdCategoria = getIDCat(comboBoxCategoria.Text);
-                articulo.IdCategoria = aux.IdMarca;
+                articulo.IdCategoria = aux.IdCategoria;
                 articulo.ImagenURl = textBoxURL.Text;
 
                 decimal precio = decimal.Parse(numPrecio.Value.ToString());

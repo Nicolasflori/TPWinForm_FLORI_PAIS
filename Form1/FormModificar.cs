@@ -15,13 +15,13 @@ namespace Form1
     public partial class FormModificar : Form
     {
         public  int ID { get; }
-
         public FormModificar(Articulos seleccionado)
         {
             InitializeComponent();
             ArticuloDB aux = new ArticuloDB();
             NegocioMarca negocioMarca = new NegocioMarca();
             NegocioCategoria negocioCategoria = new NegocioCategoria();
+
             ID = seleccionado.ID;
             aux.ID = seleccionado.ID;
             aux.Codigo = seleccionado.Codigo;
@@ -43,7 +43,7 @@ namespace Form1
             numPrecio.Value = aux.Precio;  
           
             comboBoxMarca.DataSource = negocioMarca.listar();
-            comboBoxMarca.SelectedIndex = aux.IdMarca -1;
+            comboBoxMarca.SelectedIndex = aux.IdMarca-1;
 
             comboBoxCategoria.DataSource = negocioCategoria.listar();
             comboBoxCategoria.SelectedIndex = aux.IdCategoria-1;
@@ -58,13 +58,10 @@ namespace Form1
         {
             NegocioArticulos negocioArticulos = new NegocioArticulos();
             ArticuloDB articulo = new ArticuloDB();
-            ArticuloDB aux = new ArticuloDB();
-            Articulos id = new Articulos();
-            FormModificar IDSeleccionado = new FormModificar(id);
 
             try
             {
-                //articulo.ID = IDSeleccionado.ID;
+                ArticuloDB aux = new ArticuloDB();
                 articulo.ID = this.ID;
                 articulo.Codigo = textBoxCod.Text;
                 articulo.Nombre = textBoxNombre.Text;
@@ -74,7 +71,7 @@ namespace Form1
                 articulo.IdMarca = aux.IdMarca;
 
                 aux.IdCategoria = getIDCat(comboBoxCategoria.Text);
-                articulo.IdCategoria = aux.IdMarca;
+                articulo.IdCategoria = aux.IdCategoria;
 
                 articulo.ImagenURl = textBoxURL.Text;
                 
