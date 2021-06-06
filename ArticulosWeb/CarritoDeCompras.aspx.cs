@@ -22,8 +22,7 @@ namespace ArticulosWeb
 
             if (carrito == null)
                 carrito = new List<ItemCarrito>();
-            if (Request.QueryString["e"] == null)
-            {
+            
                 if (!IsPostBack)
                 {
                     if (Request.QueryString["id"] != null)
@@ -53,8 +52,15 @@ namespace ArticulosWeb
                 }
                 Session.Add("ListaCarrito", carrito);
             }
-            else
+            
+        
+
+        protected void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            try
             {
+            
+
                 foreach (Dominio.ItemCarrito item in carrito)
                 {
                     if (item.Articulos.ID.ToString() == Request.QueryString["id"])
@@ -62,7 +68,14 @@ namespace ArticulosWeb
                         item.Cantidad--;
                     }
                 }
+              
             }
+            catch (Exception ex)
+            {
+
+                Response.Redirect("Error.aspx");
+            }
+
         }
     }
 }

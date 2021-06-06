@@ -15,9 +15,8 @@
                     <p class="card-text"><%=item.Articulos.Descripcion %></p>
                     <p class="card-text"><small class="text-muted"><%=item.Articulos.Marca + " " +  item.Articulos.Categoria %></small></p>
                     <p class="card-text"><%=item.Cantidad %></p>
-                     <a href="CarritoDeCompras.aspx?id=<% = item.Articulos.ID %>>&e=f">Eliminar</a>
+                    <a href="CarritoDeCompra.aspx?id=<% = item.Articulos.ID %>"><button type="button">Eliminar </button></a> 
                     
-                     
                     
                 </div>
             </div>
