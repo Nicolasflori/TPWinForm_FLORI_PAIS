@@ -15,7 +15,7 @@
                     <p class="card-text"><%=item.Articulos.Descripcion %></p>
                     <p class="card-text"><small class="text-muted"><%=item.Articulos.Marca + " " +  item.Articulos.Categoria %></small></p>
                     <p class="card-text"><%=item.Cantidad %></p>
-                    <a href="CarritoDeCompra.aspx?id=<% = item.Articulos.ID %>"><button type="button">Eliminar </button></a> 
+                    <asp:Button ID="buttonEliminar" runat="server" Text="Eliminar" OnClick="buttonEliminar_Click" CommandArgument='<% #Eval("Id") %>' />
                     
                     
                 </div>
