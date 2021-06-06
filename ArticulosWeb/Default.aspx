@@ -20,7 +20,7 @@
                     <p class="card-text"><small class="text-muted"><%=item.Marca + " " +  item.Categoria %></small></p>
                     <p class="card-text"><%=item.Precio %></></p>
                     <a href="DetalleArticulo.aspx?id=<% = item.ID %>" class="btn btn-primary">Ver Detalle</a>
-                    <a href="CarritoDeCompras.aspx?id=<% = item.ID %>&e=t"><i class="fas fa-shopping-basket"></i></a>
+                    <a href="CarritoDeCompras.aspx?id=<% = item.ID %>"><i class="fas fa-shopping-basket"></i></a>
                      
                     
                 </div>
