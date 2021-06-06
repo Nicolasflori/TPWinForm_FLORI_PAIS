@@ -17,6 +17,7 @@ namespace ArticulosWeb
             try
             {
                 lista = negocio.listar();
+                Session.Add("listadoArticulos", lista);
             }
             catch (Exception ex)
             {

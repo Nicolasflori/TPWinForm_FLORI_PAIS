@@ -13,6 +13,18 @@ namespace ArticulosWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             int id = int.Parse(Request.QueryString["id"]);
+            List<Articulos> listado = (List<Articulos>)Session["listadoArticulos"];
+            Articulos seleccionado = listado.Find(x => x.ID == id);
+
+            lblNombre.Text = seleccionado.Nombre;
+            LblDescripcion.Text = seleccionado.Descripcion;
+            ImageUrl.ImageUrl = seleccionado.ImagenURl;
+            decimal aux =  seleccionado.Precio;
+            LblPrecio.Text = aux.ToString();
+
+
+            
+
         }
     }
 }
