@@ -21,7 +21,6 @@ namespace ArticulosWeb
             }
             catch (Exception ex)
             {
-
                 Response.Redirect("Error.aspx");
             }
         }
