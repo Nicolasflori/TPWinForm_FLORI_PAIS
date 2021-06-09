@@ -46,3 +46,9 @@ C:\Users\Nico\Desktop\WEB\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.csprojA
 C:\Users\Nico\Desktop\WEB\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Nico\Desktop\WEB\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.dll
 C:\Users\Nico\Desktop\WEB\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Nico\Desktop\TPWinForm_FLORI_PAIS\Dominio\bin\Debug\Dominio.dll
+C:\Users\Nico\Desktop\TPWinForm_FLORI_PAIS\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Nico\Desktop\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Nico\Desktop\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Nico\Desktop\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.dll
+C:\Users\Nico\Desktop\TPWinForm_FLORI_PAIS\Dominio\obj\Debug\Dominio.pdb
