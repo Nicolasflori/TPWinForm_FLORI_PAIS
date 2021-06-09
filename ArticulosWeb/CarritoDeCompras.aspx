@@ -26,4 +26,8 @@
         </div>
         <%} %>
     </div>
+
+    <button class="btn btn-primary"><i class="fas fa-shopping-cart mr-1"></i> Comprar</button>
+    <a href="Atras.aspx?id=atras" class="btn btn-secondary">Agregar más artículos</a>
+
 </asp:Content>

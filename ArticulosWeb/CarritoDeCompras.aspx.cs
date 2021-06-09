@@ -34,16 +34,10 @@ namespace ArticulosWeb
                         elemento.Articulos = listadoOriginal.Find(x => x.ID.ToString() == Request.QueryString["id"]);
                         carrito.Add(elemento);
                     }
-                    else
-                    {
-                        foreach (Dominio.ItemCarrito item in carrito)
-                        {
-                            if (item.Articulos.ID.ToString() == Request.QueryString["id"])
-                            {
-                                item.Cantidad++;
-                            }
-                        }
-                    }
+                }
+                else if (Request.QueryString["id"] == "atras")
+                {
+                    Response.Redirect(default);
                 }
             }
             Session.Add("ListaCarrito", carrito);
