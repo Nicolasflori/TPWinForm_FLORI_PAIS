@@ -9,23 +9,22 @@
         </div>
     </div>
 
-    <div class="row">
-        <% foreach (Dominio.ItemCarrito item in carrito)
-            {
-        %>
-        <div class="card border-dark mb-3 ml-3" style="max-width: 18rem;">
-            <img src="<%=item.Articulos.ImagenURl%>" class="card-img-top embed-responsive-item" alt="...">
+  <asp:Repeater runat="server" ID="Repetidor"> 
 
-            <div class="card-body">
-                <h5 class="card-title"><%= item.Articulos.Nombre%></h5>
-                <p class="card-text"><%=item.Articulos.Descripcion %></p>
-                <p class="card-text"><small class="text-muted"><%=item.Articulos.Marca + " " +  item.Articulos.Categoria %></small></p>
-                <p class="card-text"><%=item.Cantidad %></p>
-                <asp:Button ID="buttonEliminar" runat="server" Text="Eliminar" OnClick="buttonEliminar_Click" CommandArgument='<% #Eval("Id") %>' />
-            </div>
-        </div>
-        <%} %>
-    </div>
+        <ItemTemplate> 
+            <tr> 
+                    <td><%#Eval("Articulos")%></td> 
+
+                    <td> 
+                       <asp:Button Text="Eliminar" CssClass="btn btn-primary" ID="btnEliminar" OnClick="buttonEliminar_Click" CommandArgument='<%#Eval("Articulos.ID")%>' runat="server" /> 
+
+                    </td> 
+
+                </tr> 
+
+        </ItemTemplate> 
+
+    </asp:Repeater> 
 
     <button class="btn btn-primary"><i class="fas fa-shopping-cart mr-1"></i> Comprar</button>
     <a href="Atras.aspx?id=atras" class="btn btn-secondary">Agregar más artículos</a>

@@ -39,6 +39,9 @@ namespace ArticulosWeb
                 {
                     Response.Redirect(default);
                 }
+                Repetidor.DataSource = carrito;
+
+                Repetidor.DataBind();
             }
             Session.Add("ListaCarrito", carrito);
         }
@@ -46,18 +49,39 @@ namespace ArticulosWeb
         protected void buttonEliminar_Click(object sender, EventArgs e)
         {
             try
+
             {
-                foreach (Dominio.ItemCarrito item in carrito)
-                {
-                    if (item.Articulos.ID.ToString() == Request.QueryString["id"])
-                    {
-                        item.Cantidad--;
-                    }
-                }
+
+
+
+                var argument = ((Button)sender).CommandArgument;
+
+
+
+                List<ItemCarrito> carrito = (List<ItemCarrito>)Session["listaCarrito"];
+
+                ItemCarrito elim = carrito.Find(x => x.Articulos.ID.ToString() == argument);
+
+                carrito.Remove(elim);
+
+                Session.Add("listaFavoritos", carrito);
+
+                Repetidor.DataSource = null;
+
+                Repetidor.DataSource = carrito;
+
+                Repetidor.DataBind();
+
+
+
             }
+
             catch (Exception ex)
+
             {
+
                 Response.Redirect("Error.aspx");
+
             }
         }
     }
