@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.jumbotron {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/664/173/original/vector-abstract-technology-background.jpg");
+    background-color: #17234E;
+    min-height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+

@@ -22,45 +22,37 @@ namespace ArticulosWeb
 
             if (carrito == null)
                 carrito = new List<ItemCarrito>();
-            
-                if (!IsPostBack)
+
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
                 {
-                    if (Request.QueryString["id"] != null)
+                    if (carrito.Find(x => x.Articulos.ID.ToString() == Request.QueryString["id"]) == null)
                     {
-                        if (carrito.Find(x => x.Articulos.ID.ToString() == Request.QueryString["id"]) == null)
+                        List<Articulos> listadoOriginal = (List<Articulos>)Session["listadoArticulos"];
+                        elemento.Cantidad++;
+                        elemento.Articulos = listadoOriginal.Find(x => x.ID.ToString() == Request.QueryString["id"]);
+                        carrito.Add(elemento);
+                    }
+                    else
+                    {
+                        foreach (Dominio.ItemCarrito item in carrito)
                         {
-                            List<Articulos> listadoOriginal = (List<Articulos>)Session["listadoArticulos"];
-                            elemento.Cantidad++;
-                            elemento.Articulos = listadoOriginal.Find(x => x.ID.ToString() == Request.QueryString["id"]);
-                            carrito.Add(elemento);
-                        }
-                        else
-                        {
-                            foreach (Dominio.ItemCarrito item in carrito)
+                            if (item.Articulos.ID.ToString() == Request.QueryString["id"])
                             {
-                                if (item.Articulos.ID.ToString() == Request.QueryString["id"])
-                                {
-                                    item.Cantidad++;
-                                }
+                                item.Cantidad++;
                             }
                         }
-
-
-
                     }
-
                 }
-                Session.Add("ListaCarrito", carrito);
             }
-            
-        
+            Session.Add("ListaCarrito", carrito);
+        }
 
         protected void buttonEliminar_Click(object sender, EventArgs e)
         {
             try
             {
-            
-
                 foreach (Dominio.ItemCarrito item in carrito)
                 {
                     if (item.Articulos.ID.ToString() == Request.QueryString["id"])
@@ -68,14 +60,11 @@ namespace ArticulosWeb
                         item.Cantidad--;
                     }
                 }
-              
             }
             catch (Exception ex)
             {
-
                 Response.Redirect("Error.aspx");
             }
-
         }
     }
 }
