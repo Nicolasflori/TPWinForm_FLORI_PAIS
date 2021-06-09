@@ -21,10 +21,11 @@ namespace ArticulosWeb
             ImageUrl.ImageUrl = seleccionado.ImagenURl;
             decimal aux =  seleccionado.Precio;
             LblPrecio.Text = aux.ToString();
+        }
 
-
-            
-
+        protected void Unnamed_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }
