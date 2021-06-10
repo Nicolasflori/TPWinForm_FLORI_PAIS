@@ -27,7 +27,8 @@
                         <td><%#Eval("Articulos.Marca")%></td>
                         <td>$<%#Eval("Articulos.Precio")%></td>
                         <td>
-                            <asp:TextBox TextMode="Number" ID="Cantidad" runat="server" AutoPostBack="true" placeholder="1"></asp:TextBox></td>
+
+                            <asp:TextBox TextMode="Number" ID="Cantidad" runat="server" AutoPostBack="true" min="1" MaxLength="20" placeholder="1"></asp:TextBox></td>
                         <td>
                             <asp:Button Text="Eliminar" CssClass="btn btn-primary" ID="btnEliminar" OnClick="buttonEliminar_Click" CommandArgument='<%#Eval("Articulos.ID")%>' runat="server" />
                         </td>

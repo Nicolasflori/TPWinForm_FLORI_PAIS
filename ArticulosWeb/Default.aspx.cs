@@ -24,5 +24,14 @@ namespace ArticulosWeb
                 Response.Redirect("Error.aspx");
             }
         }
+
+        protected void Unnamed_ServerClick(object sender, EventArgs e)
+        {
+            NegocioArticulos negocio = new NegocioArticulos();
+            Articulos articulo = new Articulos();
+            lista = negocio.listar();
+            lista = lista.FindAll(x => x.Nombre.ToUpper().Contains(Request["search"].ToUpper()));
+            Session.Add("listadoArticulos", lista);
+        }
     }
 }
