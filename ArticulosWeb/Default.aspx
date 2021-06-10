@@ -14,7 +14,7 @@
         <% foreach (Dominio.Articulos item in lista)
             {%>
         <div class="card col-sm-3 border-dark mb-3 ml-3" style="max-width: 18rem;">
-            <img src="<%=item.ImagenURl%>" class="card-img-top embed-responsive-item" alt="Sample">
+            <img src="<%=item.ImagenURl%>" class="card-img-top embed-responsive-item" alt="..">
             <div class="card-body">
                 <h5 class="card-title"><%= item.Nombre%></h5>
                 <p class="card-text"><%=item.Descripcion %></p>
